@@ -118,6 +118,12 @@ func (d *Driver) connectAPI() error {
 func (d *Driver) GetCreateFlags() []mcnflag.Flag {
 	return []mcnflag.Flag{
 		mcnflag.StringFlag{
+			EnvVar: "PROXMOXVE_PROXMOX_IP",
+			Name:   "proxmoxve-proxmox-ip",
+			Usage:  "Node IP using cloudinit",
+			Value:  "192.168.1.253",
+		},
+		mcnflag.StringFlag{
 			EnvVar: "PROXMOXVE_PROXMOX_HOST",
 			Name:   "proxmoxve-proxmox-host",
 			Usage:  "Host to connect to",
